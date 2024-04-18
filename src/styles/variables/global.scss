@@ -1,0 +1,14 @@
+:root{
+	--font-family-main: Consolas, 'Times New Roman', Serif;
+
+	--fon-size-custom: 36px;
+
+
+	--fon-size-m: 16px;
+	--fon-line-m: 24px;
+	--font-m: var(--fon-size-m) / var(--fon-line-m) var(--font-family-main);
+	
+	--fon-size-l: 24px;
+	--fon-line-l: 32px;
+	--font-l: var(--fon-size-l) / var(--fon-line-l) var(--font-family-main);
+}
