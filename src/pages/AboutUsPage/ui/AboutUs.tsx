@@ -1,10 +1,12 @@
 import React from 'react'
+import {useTranslation} from "react-i18next";
 
 function AboutUs() {
+	const {t} = useTranslation('about')
 	return (
 		<div>
 			<h1>
-				AboutUs
+				{t("about us")}
 			</h1>
 		</div>
 	)
