@@ -1,4 +1,9 @@
 {
   "test example": "Тестовий приклад",
-  "language": "Уркаїнська"
+  "language": "Уркаїнська",
+  "page not found": "Сторінка не знайдена",
+  "Something went wrong": "Щось пішло не так",
+  "reload page": "Перезавантажити сторінку",
+  "go to main page": "На головну сторінку",
+  "throw error": "Створити помилку"
 }

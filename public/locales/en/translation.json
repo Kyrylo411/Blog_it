@@ -1,4 +1,9 @@
 {
   "test example": "Test example",
-  "language": "English"
+  "language": "English",
+  "page not found": "Page not found",
+  "Something went wrong": "Something went wrong",
+  "reload page": "Reload page",
+  "go to main page": "Go to main page",
+  "throw error": "Throw error"
 }
