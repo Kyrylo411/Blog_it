@@ -12,16 +12,19 @@ describe('classNames', () => {
 
     test('with mods', () => {
         const expected = 'testClass class1 class2 hovered visible';
-        expect(classNames('testClass', { hovered: true, visible: true }, ['class1', 'class2'])).toBe(expected);
+        expect(classNames('testClass', { hovered: true, visible: true }, ['class1', 'class2']))
+            .toBe(expected);
     });
 
     test('with false mods', () => {
         const expected = 'testClass class1 class2 hovered';
-        expect(classNames('testClass', { hovered: true, hidden: false }, ['class1', 'class2'])).toBe(expected);
+        expect(classNames('testClass', { hovered: true, hidden: false }, ['class1', 'class2']))
+            .toBe(expected);
     });
 
     test('with undefined mods', () => {
         const expected = 'testClass class1 class2 hovered';
-        expect(classNames('testClass', { hovered: true, hidden: undefined }, ['class1', 'class2'])).toBe(expected);
+        expect(classNames('testClass', { hovered: true, hidden: undefined }, ['class1', 'class2']))
+            .toBe(expected);
     });
 });
