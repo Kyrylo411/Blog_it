@@ -1,11 +1,9 @@
 {
-  "Something went wrong": "",
-  "about us": "",
-  "go to main page": "",
-  "language": "",
-  "main page": "",
-  "page loader": "page loader",
-  "page not found": "page not found",
+  "something went wrong": "Щось пішло не так",
+  "about us": "Про сайт",
+  "language": "Мова",
+  "main page": "Головна сторніка",
+  "page not found": "Сторінка не знайдена",
   "reload page": "Перезагрузити сторінку",
-  "throw error": "throw error"
+  "throw error": "Створити помилку"
 }

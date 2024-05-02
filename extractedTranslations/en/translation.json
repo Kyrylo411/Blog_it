@@ -1,11 +1,9 @@
 {
-  "Something went wrong": "",
-  "about us": "",
-  "go to main page": "",
-  "language": "",
-  "main page": "",
-  "page loader": "page loader",
-  "page not found": "page not found",
+  "something went wrong": "Something went wrong",
+  "about us": "About us",
+  "language": "Language",
+  "main page": "Main page",
+  "page not found": "Page not found",
   "reload page": "Reload page",
-  "throw error": "throw error"
+  "throw error": "Throw error"
 }
