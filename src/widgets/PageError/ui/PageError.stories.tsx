@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {Theme} from "app/providers/ThemeProvider";
-import {ThemeDecorator} from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import {PageError} from "./PageError";
+import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { PageError } from './PageError';
 
 export default {
     title: 'widget/PageError',
@@ -20,5 +20,4 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
-
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

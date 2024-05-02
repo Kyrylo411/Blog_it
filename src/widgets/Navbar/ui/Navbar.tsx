@@ -13,9 +13,14 @@ export function Navbar({ className }:NavbarProps) {
         <div className={classNames(cls.navbar, {}, [className])}>
             <div className={classNames(cls.linksWrapper)}>
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/">
-                    {t('main page', {ns: 'mainPage'})}
+                    {t('main page', { ns: 'mainPage' })}
                 </AppLink>
-                <AppLink to="/about-us" theme={AppLinkTheme.SECONDARY}>{t('about us', {ns: 'about'})}</AppLink>
+                <AppLink
+                    to="/about-us"
+                    theme={AppLinkTheme.SECONDARY}
+                >
+                    {t('about us', { ns: 'about' })}
+                </AppLink>
             </div>
         </div>
     );

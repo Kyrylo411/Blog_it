@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import { BuildOptions } from './types/config';
-import {buildCssLoader} from "./loaders/buildCssLoader";
+import { buildCssLoader } from './loaders/buildCssLoader';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const babelLoader = {
@@ -34,7 +34,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         use: ['@svgr/webpack'],
     };
 
-    const cssLoader = buildCssLoader(isDev)
+    const cssLoader = buildCssLoader(isDev);
 
     const typescriptLoader = {
         test: /\.tsx?$/,
