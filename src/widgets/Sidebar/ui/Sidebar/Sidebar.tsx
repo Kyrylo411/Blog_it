@@ -15,17 +15,28 @@ interface SidebarProps {
 }
 
 export function Sidebar({ className }:SidebarProps) {
-    const [collapsed, setCollapsed] = useState(true);
+    const [collapsed, setCollapsed] = useState(false);
+    const { t } = useTranslation(['about', 'mainPage']);
+
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
-    const { t } = useTranslation(['about', 'mainPage']);
 
     return (
         <div
             data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
+            <Button
+                data-testid="sidebar-toggle"
+                onClick={onToggle}
+                className={cls.collapseBtn}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
+                square
+                size={ButtonSize.L}
+            >
+                {collapsed ? '>' : '<'}
+            </Button>
             <div className={cls.itemsWrapper}>
                 <AppLink
                     className={cls.linkItem}
@@ -49,16 +60,6 @@ export function Sidebar({ className }:SidebarProps) {
                 </AppLink>
 
             </div>
-            <Button
-                data-testid="sidebar-toggle"
-                onClick={onToggle}
-                className={cls.collapseBtn}
-                theme={ButtonTheme.BACKGROUND_INVERTED}
-                square
-                size={ButtonSize.L}
-            >
-                {collapsed ? '>' : '<'}
-            </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher
