@@ -30,6 +30,7 @@ module.exports = {
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
         ],
+        'no-unused-vars': 'warn',
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
