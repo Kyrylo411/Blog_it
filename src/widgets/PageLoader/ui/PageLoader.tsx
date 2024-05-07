@@ -8,7 +8,7 @@ interface PageLoaderProps {
 
 export function PageLoader({ className }:PageLoaderProps) {
     return (
-        <div className={classNames(cls.PageLoader, {}, [])}>
+        <div className={classNames(cls.PageLoader, {}, [className])}>
             <Loader />
         </div>
 

@@ -1,7 +1,5 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { MainPage } from 'pages/MainPage';
-import { AboutUsPage } from 'pages/AboutUsPage';
 import { routeConfig } from 'shared/config/routerConfig/routeConfig';
 import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
 
