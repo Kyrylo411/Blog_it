@@ -8,7 +8,7 @@ function Main() {
         <div>
             <h1>
                 {t('main page')}
-                <BugButton />
+                {/* <BugButton /> */}
             </h1>
         </div>
     );

@@ -1,4 +1,4 @@
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonSize } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -17,6 +17,7 @@ export function BugButton() {
     return (
         <Button
             onClick={trowError}
+            size={ButtonSize.M}
         >
             {t('throw error')}
         </Button>

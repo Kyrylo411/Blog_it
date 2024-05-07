@@ -6,15 +6,62 @@
     transition: width 0.3s ease;
 }
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
-}
-
 .switchers {
     position: absolute;
     bottom: 20px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+}
+
+.collapseBtn {
+    position: absolute;
+    bottom: 32px;
+    right: -32px;
+    z-index: 1;
+    color: yellow;
+}
+
+.link {
+    opacity: 1;
+}
+
+.itemsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 10px;
+}
+
+.linkItem {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.icon {
+    fill: var(--inverted-secondary-color);
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .link {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        width: 0;
+    }
+
+    .linkItem {
+        justify-content: center;
+    }
 }
