@@ -7,5 +7,7 @@
   "go to main page": "Go to main page",
   "throw error": "Throw error",
   "toggle": "Toggle",
-  "short lang": "Eng"
+  "short lang": "Eng",
+  "Log-in": "Log in",
+  "Some Text for Authorization": "Some Text for Authorization"
 }
