@@ -20,7 +20,6 @@ export function Modal({
 }: ModalProps) {
 	const [isClosing, setIsClosing] = useState(false);
 	const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
-	const { theme } = useTheme();
 
 	const mods: Record<string, boolean> = {
 		[cls.opened]: isOpen,
@@ -58,7 +57,7 @@ export function Modal({
 
 	return (
 		<Portal>
-			<div className={classNames(cls.Modal, mods, [className, theme])}>
+			<div className={classNames(cls.Modal, mods, [className])}>
 				<div className={cls.overlay} onClick={handleClose}>
 					<div className={cls.content} onClick={handleContentClick}>
 						{children}
