@@ -1,19 +1,19 @@
 .inputWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .placeholder {
-	font:var(--font-m)
+    font: var(--font-m);
 }
 
 .input {
-	background: transparent;
-	border: 1px solid var(--inverted-primary-color);
-	border-radius: 8px;
-	padding: 10px;
-	outline: none;
-	width: 100%;
-	color: var(--primary-color);
+    background: transparent;
+    border: 1px solid var(--inverted-primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    color: var(--primary-color);
 }
