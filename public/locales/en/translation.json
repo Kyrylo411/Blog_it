@@ -9,5 +9,8 @@
   "toggle": "Toggle",
   "short lang": "Eng",
   "Log-in": "Log in",
-  "Some Text for Authorization": "Some Text for Authorization"
+  "Some Text for Authorization": "Some Text for Authorization",
+  "enter": "Enter",
+  "enter name":"Enter name",
+  "enter password":"Enter password"
 }

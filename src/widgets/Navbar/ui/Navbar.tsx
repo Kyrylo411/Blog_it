@@ -4,32 +4,37 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { useCallback, useState } from 'react';
 import cls from './Navbar.module.scss';
+import { LoginModal } from 'features/AuthByUsername';
 
 interface NavbarProps {
-    className?: string;
+	className?: string;
 }
 
-export function Navbar({ className }:NavbarProps) {
-    const [isAuthModal, setIsAuthModal] = useState(false);
-    const { t } = useTranslation();
+export function Navbar({ className }: NavbarProps) {
+	const [isAuthModal, setIsAuthModal] = useState(false);
+	const { t } = useTranslation();
 
-    const onToggleModal = useCallback(() => {
-        setIsAuthModal((prev) => !prev);
-    }, []);
+	const onCloseModal = useCallback(() => {
+		setIsAuthModal(false);
+	}, []);
 
-    return (
-        <div className={classNames(cls.navbar, {}, [className])}>
-            <Button
-                theme={ButtonTheme.CLEAR_INVERTED}
-                className={cls.links}
-                onClick={onToggleModal}
-            >
-                {t('Log-in')}
-            </Button>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                {t('Some Text for Authorization')}
-            </Modal>
-            <div className={classNames(cls.linksWrapper)} />
-        </div>
-    );
+	const onShowModal = useCallback(() => {
+		setIsAuthModal(true);
+	}, []);
+
+
+	return (
+		<div className={classNames(cls.navbar, {}, [className])}>
+			<Button
+				theme={ButtonTheme.CLEAR_INVERTED}
+				className={cls.links}
+				onClick={onShowModal}
+			>
+				{t('Log-in')}
+			</Button>
+			<LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+
+			<div className={classNames(cls.linksWrapper)} />
+		</div>
+	);
 }

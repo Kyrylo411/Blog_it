@@ -9,5 +9,8 @@
   "toggle": "Переключити",
   "short lang": "Укр",
   "Log-in": "Війти",
-  "Some Text for Authorization": "Some Text for Authorization"
+  "Some Text for Authorization": "Some Text for Authorization",
+  "enter": "Вхід",
+  "enter name":"Введіть ім'я",
+  "enter password":"Введіть пароль"
 }
