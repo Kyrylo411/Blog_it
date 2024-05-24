@@ -24,9 +24,9 @@ module.exports = {
         'react-hooks',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
+        'react/jsx-indent': [2, 'tab'],
+        'react/jsx-indent-props': [2, 'tab'],
+        indent: [2, "tab"],
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
@@ -52,7 +52,7 @@ module.exports = {
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        'no-tabs': 0,
+        'no-tabs': 'off',
         'no-console': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',

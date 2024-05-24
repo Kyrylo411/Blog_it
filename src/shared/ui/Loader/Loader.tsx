@@ -6,20 +6,20 @@ interface LoaderProps {
 }
 
 export function Loader({ className }:LoaderProps) {
-    return (
-        <div className={classNames('lds-default', {}, [className])}>
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-        </div>
-    );
+	return (
+		<div className={classNames('lds-default', {}, [className])}>
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+		</div>
+	);
 }

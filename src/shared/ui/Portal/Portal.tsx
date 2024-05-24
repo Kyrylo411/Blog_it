@@ -7,5 +7,5 @@ interface PortalProps {
 }
 
 export function Portal({ children, element = document.body }:PortalProps) {
-    return createPortal(children, element);
+	return createPortal(children, element);
 }

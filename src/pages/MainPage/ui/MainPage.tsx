@@ -4,10 +4,10 @@ import { Input } from 'shared/ui/Input/Input';
 
 function Main() {
 	const { t } = useTranslation('mainPage');
-	const [value, setValue] = useState('')
+	const [value, setValue] = useState('');
 	const handleChange = (val: string) => {
-		setValue(val)
-	}
+		setValue(val);
+	};
 	return (
 		<div>
 			<h1>

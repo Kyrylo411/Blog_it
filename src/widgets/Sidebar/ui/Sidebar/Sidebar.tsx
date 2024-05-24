@@ -15,58 +15,58 @@ interface SidebarProps {
 }
 
 export function Sidebar({ className }:SidebarProps) {
-    const [collapsed, setCollapsed] = useState(false);
-    const { t } = useTranslation(['about', 'mainPage']);
+	const [collapsed, setCollapsed] = useState(false);
+	const { t } = useTranslation(['about', 'mainPage']);
 
-    const onToggle = () => {
-        setCollapsed((prev) => !prev);
-    };
+	const onToggle = () => {
+		setCollapsed((prev) => !prev);
+	};
 
-    return (
-        <div
-            data-testid="sidebar"
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
-        >
-            <Button
-                data-testid="sidebar-toggle"
-                onClick={onToggle}
-                className={cls.collapseBtn}
-                theme={ButtonTheme.BACKGROUND_INVERTED}
-                square
-                size={ButtonSize.L}
-            >
-                {collapsed ? '>' : '<'}
-            </Button>
-            <div className={cls.itemsWrapper}>
-                <AppLink
-                    className={cls.linkItem}
-                    theme={AppLinkTheme.SECONDARY}
-                    to={RouterPath.main}
-                >
-                    <HomeIcon className={cls.icon} />
-                    <span className={cls.link}>
-                        {t('main page', { ns: 'mainPage' })}
-                    </span>
-                </AppLink>
-                <AppLink
-                    className={cls.linkItem}
-                    to={RouterPath.about_us}
-                    theme={AppLinkTheme.SECONDARY}
-                >
-                    <AboutUsIcon className={cls.icon} />
-                    <span className={cls.link}>
-                        {t('about us', { ns: 'about' })}
-                    </span>
-                </AppLink>
+	return (
+		<div
+			data-testid="sidebar"
+			className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+		>
+			<Button
+				data-testid="sidebar-toggle"
+				onClick={onToggle}
+				className={cls.collapseBtn}
+				theme={ButtonTheme.BACKGROUND_INVERTED}
+				square
+				size={ButtonSize.L}
+			>
+				{collapsed ? '>' : '<'}
+			</Button>
+			<div className={cls.itemsWrapper}>
+				<AppLink
+					className={cls.linkItem}
+					theme={AppLinkTheme.SECONDARY}
+					to={RouterPath.main}
+				>
+					<HomeIcon className={cls.icon} />
+					<span className={cls.link}>
+						{t('main page', { ns: 'mainPage' })}
+					</span>
+				</AppLink>
+				<AppLink
+					className={cls.linkItem}
+					to={RouterPath.about_us}
+					theme={AppLinkTheme.SECONDARY}
+				>
+					<AboutUsIcon className={cls.icon} />
+					<span className={cls.link}>
+						{t('about us', { ns: 'about' })}
+					</span>
+				</AppLink>
 
-            </div>
-            <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher
-                    short={collapsed}
-                    className={cls.lang}
-                />
-            </div>
-        </div>
-    );
+			</div>
+			<div className={cls.switchers}>
+				<ThemeSwitcher />
+				<LangSwitcher
+					short={collapsed}
+					className={cls.lang}
+				/>
+			</div>
+		</div>
+	);
 }

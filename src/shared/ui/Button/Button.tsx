@@ -23,29 +23,29 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 }
 
 export const Button: FC <ButtonProps> = (
-    {
-        square,
-        size = ButtonSize.M,
-        theme,
-        className,
-        children,
-        ...otherProps
-    },
+	{
+		square,
+		size = ButtonSize.M,
+		theme,
+		className,
+		children,
+		...otherProps
+	},
 ) => {
-    const mods: Record<string, boolean> = {
-        [cls.square]: square,
-    };
+	const mods: Record<string, boolean> = {
+		[cls.square]: square,
+	};
 
-    console.log('size', size);
-    console.log('mods', mods);
+	console.log('size', size);
+	console.log('mods', mods);
 
-    return (
-        <button
-            type="button"
-            className={classNames(cls.Button, mods, [className, cls[theme], cls[size]])}
-            {...otherProps}
-        >
-            {children}
-        </button>
-    );
+	return (
+		<button
+			type="button"
+			className={classNames(cls.Button, mods, [className, cls[theme], cls[size]])}
+			{...otherProps}
+		>
+			{children}
+		</button>
+	);
 };

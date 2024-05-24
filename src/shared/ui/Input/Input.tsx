@@ -1,6 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './Input.module.scss'
-import React, { InputHTMLAttributes, memo, useEffect, useRef } from 'react'
+import { classNames } from 'shared/lib/classNames/classNames';
+import React, {
+	InputHTMLAttributes, memo, useEffect, useRef,
+} from 'react';
+import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
@@ -22,26 +24,27 @@ export const Input = memo((props: InputProps) => {
 		placeholder,
 		autofocus,
 		...otherProps
-	} = props
+	} = props;
 
-	const inputRef = useRef<HTMLInputElement>(null)
+	const inputRef = useRef<HTMLInputElement>(null);
 
 	useEffect(() => {
 		if (autofocus) {
-			inputRef.current?.focus()
+			inputRef.current?.focus();
 		}
-	}, [autofocus])
-
+	}, [autofocus]);
 
 	const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		onChange?.(e.target.value)
-	}
+		onChange?.(e.target.value);
+	};
 
 	return (
 		<div className={classNames(cls.inputWrapper, {}, [className])}>
-			{placeholder && <div className={cls.placeholder}>
-				{placeholder}
-			</div>}
+			{placeholder && (
+				<div className={cls.placeholder}>
+					{placeholder}
+				</div>
+			)}
 			<input
 				className={cls.input}
 				type={type}
@@ -50,5 +53,6 @@ export const Input = memo((props: InputProps) => {
 				ref={inputRef}
 				{...otherProps}
 			/>
-		</div>)
-})
+		</div>
+	);
+});

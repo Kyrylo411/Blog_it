@@ -16,16 +16,18 @@ interface ModalProps {
 const ANIMATION_DELAY = 200;
 
 export function Modal(props: ModalProps) {
-	const { className, children, isOpen, onClose, } = props
+	const {
+		className, children, isOpen, onClose,
+	} = props;
 	const [isClosing, setIsClosing] = useState(false);
 	const [isMounted, setIsMounted] = useState(false);
 	const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
 
 	useEffect(() => {
 		if (isOpen) {
-			setIsMounted(true)
+			setIsMounted(true);
 		}
-	}, [isOpen])
+	}, [isOpen]);
 
 	const mods: Record<string, boolean> = {
 		[cls.opened]: isOpen,
@@ -62,7 +64,7 @@ export function Modal(props: ModalProps) {
 	};
 
 	if (lazy && !isMounted) {
-		return null
+		return null;
 	}
 
 	return (

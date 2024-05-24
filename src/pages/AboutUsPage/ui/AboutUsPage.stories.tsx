@@ -3,14 +3,14 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import AboutUsPage
-    from 'pages/AboutUsPage/ui/AboutUsPage';
+	from 'pages/AboutUsPage/ui/AboutUsPage';
 
 export default {
-    title: 'pages/AboutUs',
-    component: AboutUsPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+	title: 'pages/AboutUs',
+	component: AboutUsPage,
+	argTypes: {
+		backgroundColor: { control: 'color' },
+	},
 } as ComponentMeta<typeof AboutUsPage>;
 
 const Template: ComponentStory<typeof AboutUsPage> = (args:{}) => <AboutUsPage {...args} />;

@@ -1,5 +1,5 @@
 import React, {
-    ErrorInfo, ReactNode, Suspense,
+	ErrorInfo, ReactNode, Suspense,
 } from 'react';
 import { PageError } from 'widgets/PageError';
 
@@ -12,32 +12,32 @@ interface ErrorBoundaryState {
 }
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-    constructor(props: ErrorBoundaryProps) {
-        super(props);
-        this.state = { hasError: false };
-    }
+	constructor(props: ErrorBoundaryProps) {
+		super(props);
+		this.state = { hasError: false };
+	}
 
-    static getDerivedStateFromError() {
-        return { hasError: true };
-    }
+	static getDerivedStateFromError() {
+		return { hasError: true };
+	}
 
-    componentDidCatch(error: Error, info: ErrorInfo) {
-        console.log(error, info.componentStack);
-    }
+	componentDidCatch(error: Error, info: ErrorInfo) {
+		console.log(error, info.componentStack);
+	}
 
-    render() {
-        const { children } = this.props;
-        const { hasError } = this.state;
-        if (hasError) {
-            return (
-                <Suspense fallback="">
-                    <PageError />
-                </Suspense>
-            );
-        }
+	render() {
+		const { children } = this.props;
+		const { hasError } = this.state;
+		if (hasError) {
+			return (
+				<Suspense fallback="">
+					<PageError />
+				</Suspense>
+			);
+		}
 
-        return children;
-    }
+		return children;
+	}
 }
 
 export default ErrorBoundary;
