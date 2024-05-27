@@ -12,5 +12,8 @@
   "Some Text for Authorization": "Some Text for Authorization",
   "enter": "Enter",
   "enter name":"Enter name",
-  "enter password":"Enter password"
+  "enter password":"Enter password",
+  "authorization form": "Authorization Form",
+  "incorrect login or password": "Incorrect login or password",
+  "log-out": "Log-out"
 }

@@ -1,17 +1,22 @@
 {
   "Log-in": "",
+  "Log-out": "",
   "Some Text for Authorization": "",
   "Something went wrong": "",
   "about us": "",
+  "authorization form": "",
   "enter": "",
   "enter name": "",
   "enter password": "",
   "go to main page": "",
+  "incorrect login or password": "",
   "language": "",
+  "log-out": "",
   "main page": "",
   "page loader": "page loader",
   "page not found": "page not found",
   "reload page": "Перезагрузити сторінку",
   "throw error": "Створити помилку",
-  "toggle": "Переключити"
+  "toggle": "Переключити",
+  "дog-out": ""
 }

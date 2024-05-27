@@ -12,5 +12,8 @@
   "Some Text for Authorization": "Some Text for Authorization",
   "enter": "Вхід",
   "enter name":"Введіть ім'я",
-  "enter password":"Введіть пароль"
+  "enter password":"Введіть пароль",
+  "authorization form": "Форма Авторизації",
+  "incorrect login or password": "Невірний логін або пароль",
+  "log-out": "Вийти"
 }

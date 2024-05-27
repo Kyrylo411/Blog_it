@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Theme } from 'app/providers/ThemeProvider';
@@ -93,4 +92,11 @@ SquareSizeXl.args = {
 	theme: ButtonTheme.BACKGROUND_INVERTED,
 	square: true,
 	size: ButtonSize.XL,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	children: 'Text',
+	theme: ButtonTheme.OUTLINE,
+	disabled: true,
 };
