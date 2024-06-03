@@ -5,9 +5,10 @@ type ActionCreatorType<Return, Arg, RejectedValue>
 	= (arg: Arg) => AsyncThunkAction<Return, Arg, { rejectValue: RejectedValue }>
 
 export class TestAsyncThunk<Return, Arg, RejectedValue> {
-
 	dispatch: jest.MockedFn<any>
+
 	getState: () => StateSchema
+
 	actionCreator: ActionCreatorType<Return, Arg, RejectedValue>
 
 	constructor(actionCreator: ActionCreatorType<Return, Arg, RejectedValue>) {
@@ -22,5 +23,4 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
 
 		return result
 	}
-
 }

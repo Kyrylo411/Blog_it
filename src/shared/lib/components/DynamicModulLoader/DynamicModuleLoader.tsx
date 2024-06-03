@@ -19,11 +19,11 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
 	const {
 		children,
 		reducers,
-		removeAfterUnmount
+		removeAfterUnmount,
 	} = props
 
 	const store = useStore() as ReduxStoreWithManager
-	const dispatch = useDispatch();
+	const dispatch = useDispatch()
 
 	useEffect(() => {
 		Object.entries(reducers).forEach(([name, reducer]: ReducersListEntries) => {

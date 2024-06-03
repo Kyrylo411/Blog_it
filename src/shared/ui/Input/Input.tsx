@@ -1,8 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames'
 import React, {
 	InputHTMLAttributes, memo, useEffect, useRef,
-} from 'react';
-import cls from './Input.module.scss';
+} from 'react'
+import cls from './Input.module.scss'
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
@@ -24,19 +24,19 @@ export const Input = memo((props: InputProps) => {
 		placeholder,
 		autofocus,
 		...otherProps
-	} = props;
+	} = props
 
-	const inputRef = useRef<HTMLInputElement>(null);
+	const inputRef = useRef<HTMLInputElement>(null)
 
 	useEffect(() => {
 		if (autofocus) {
-			inputRef.current?.focus();
+			inputRef.current?.focus()
 		}
-	}, [autofocus]);
+	}, [autofocus])
 
 	const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		onChange?.(e.target.value);
-	};
+		onChange?.(e.target.value)
+	}
 
 	return (
 		<div className={classNames(cls.inputWrapper, {}, [className])}>
@@ -54,5 +54,5 @@ export const Input = memo((props: InputProps) => {
 				{...otherProps}
 			/>
 		</div>
-	);
-});
+	)
+})

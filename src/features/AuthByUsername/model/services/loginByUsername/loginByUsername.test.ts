@@ -1,15 +1,14 @@
 import axios from 'axios'
-import { loginByUsername } from './loginByUsername'
 import { Dispatch } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { userActions } from 'entities/User'
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
+import { loginByUsername } from './loginByUsername'
 
 jest.mock('axios')
 const mockedAxios = jest.mocked(axios, true)
 
 describe('login by Username', () => {
-
 	//! Tests without class
 	// let dispatch: Dispatch
 	// let getState: () => StateSchema
@@ -55,7 +54,7 @@ describe('login by Username', () => {
 		expect(mockedAxios.post).toHaveBeenCalled()
 		expect(result.meta.requestStatus).toBe('fulfilled')
 		expect(result.payload).toEqual(userValue)
-	});
+	})
 	test('authorization error', async () => {
 		const userValue = { username: 'admin', id: '1' }
 		mockedAxios.post.mockReturnValue(Promise.resolve({ status: 403 }))

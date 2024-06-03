@@ -1,18 +1,18 @@
-import { Button, ButtonSize } from 'shared/ui/Button/Button';
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Button, ButtonSize } from 'shared/ui/Button/Button'
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 // delete; component for error testing
 export function BugButton() {
-	const [error, setError] = useState(false);
-	const { t } = useTranslation();
-	const trowError = () => setError(true);
+	const [error, setError] = useState(false)
+	const { t } = useTranslation()
+	const trowError = () => setError(true)
 
 	useEffect(() => {
 		if (error) {
-			throw new Error();
+			throw new Error()
 		}
-	}, [error]);
+	}, [error])
 
 	return (
 		<Button
@@ -21,5 +21,5 @@ export function BugButton() {
 		>
 			{t('throw error')}
 		</Button>
-	);
+	)
 }

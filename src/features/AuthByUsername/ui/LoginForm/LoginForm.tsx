@@ -1,18 +1,18 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import { useTranslation } from "react-i18next";
-import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import { Input } from "shared/ui/Input/Input";
-import { memo, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import cls from "./LoginForm.module.scss";
-import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { getLoginUserName } from '../../model/selectors/getLoginUserName/getLoginUserName';
-import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
-import { getLoginLoading } from '../../model/selectors/getLoginLoading/getLoginLoading';
-import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModulLoader/DynamicModuleLoader';
+import { classNames } from 'shared/lib/classNames/classNames'
+import { useTranslation } from 'react-i18next'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Input } from 'shared/ui/Input/Input'
+import { memo, useCallback } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModulLoader/DynamicModuleLoader'
+import cls from './LoginForm.module.scss'
+import { loginActions, loginReducer } from '../../model/slice/loginSlice'
+import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
+import { getLoginUserName } from '../../model/selectors/getLoginUserName/getLoginUserName'
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword'
+import { getLoginLoading } from '../../model/selectors/getLoginLoading/getLoginLoading'
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
 
 export interface LoginFormProps {
 	className?: string;
@@ -23,8 +23,8 @@ const initialReducers: ReducersList = {
 }
 
 const LoginForm = memo(({ className }: LoginFormProps) => {
-	const { t } = useTranslation();
-	const dispatch = useDispatch();
+	const { t } = useTranslation()
+	const dispatch = useDispatch()
 
 	const username = useSelector(getLoginUserName)
 	const password = useSelector(getLoginPassword)
@@ -33,24 +33,24 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 
 	const onUsernameChange = useCallback(
 		(value: string) => {
-			dispatch(loginActions.setUserName(value));
+			dispatch(loginActions.setUserName(value))
 		},
-		[dispatch]
-	);
+		[dispatch],
+	)
 
 	const onPasswordChange = useCallback(
 		(value: string) => {
-			dispatch(loginActions.setPassword(value));
+			dispatch(loginActions.setPassword(value))
 		},
-		[dispatch]
-	);
+		[dispatch],
+	)
 
 	const onLoginClick = useCallback(
 		() => {
 			dispatch(loginByUsername({ username, password }))
 		},
-		[dispatch, username, password]
-	);
+		[dispatch, username, password],
+	)
 
 	return (
 		<DynamicModuleLoader reducers={initialReducers}>
@@ -60,7 +60,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 				<div className={cls.inputs}>
 					<Input
 						type="text"
-						placeholder={t("enter name")}
+						placeholder={t('enter name')}
 						autofocus
 						onChange={onUsernameChange}
 						value={username}
@@ -68,7 +68,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 					<Input
 						className={cls.input}
 						type="text"
-						placeholder={t("enter password")}
+						placeholder={t('enter password')}
 						onChange={onPasswordChange}
 						value={password}
 					/>
@@ -79,11 +79,11 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 					onClick={onLoginClick}
 					disabled={isLoading}
 				>
-					{t("enter")}
+					{t('enter')}
 				</Button>
 			</div>
 		</DynamicModuleLoader>
-	);
-});
+	)
+})
 
 export default LoginForm
