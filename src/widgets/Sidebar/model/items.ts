@@ -1,3 +1,4 @@
+import React from 'react'
 import { RouterPath } from 'shared/config/routerConfig/routeConfig'
 import HomeIcon from 'shared/assets/icons/Home.svg'
 import AboutUsIcon from 'shared/assets/icons/About-us.svg'
@@ -15,18 +16,18 @@ export const SidebarItemsList: SideBarItemType[] = [
 		path: RouterPath.main,
 		Icon: HomeIcon,
 		text: 'main page',
-		translation: 'mainPage'
+		translation: 'mainPage',
 	},
 	{
 		path: RouterPath.about_us,
 		Icon: AboutUsIcon,
 		text: 'about us',
-		translation: 'about'
+		translation: 'about',
 	},
 	{
 		path: RouterPath.profile,
 		Icon: Profile,
 		text: 'profile page',
-		translation: 'profile page'
-	}
+		translation: 'profile page',
+	},
 ]

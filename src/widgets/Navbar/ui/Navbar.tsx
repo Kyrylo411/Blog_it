@@ -5,8 +5,8 @@ import { memo, useCallback, useState } from 'react'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, userActions } from 'entities/User'
-import cls from './Navbar.module.scss'
 import { loginActions } from 'features/AuthByUsername/model/slice/loginSlice'
+import cls from './Navbar.module.scss'
 
 interface NavbarProps {
 	className?: string;

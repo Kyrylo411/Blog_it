@@ -6,6 +6,7 @@ import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import cls from './LoginForm.module.scss'
 import { loginActions, loginReducer } from '../../model/slice/loginSlice'
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
@@ -13,7 +14,6 @@ import { getLoginUserName } from '../../model/selectors/getLoginUserName/getLogi
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword'
 import { getLoginLoading } from '../../model/selectors/getLoginLoading/getLoginLoading'
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 export interface LoginFormProps {
 	className?: string;

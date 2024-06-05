@@ -5,7 +5,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { profileReducer } from 'entities/Profile'
 
 const reducers: ReducersList = {
-	profile: profileReducer
+	profile: profileReducer,
 }
 
 interface ProfilePageProps {

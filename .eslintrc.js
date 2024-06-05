@@ -61,10 +61,13 @@ module.exports = {
 		'no-param-reassign': 'off',
 		'linebreak-style': 'off',
 		"semi": [2, "never"],
-		"react/jsx-no-useless-fragment": 'off'
+		"react/jsx-no-useless-fragment": 'off',
+		"comma-dangle": ["warn"],
+		"eol-last":["warn"]
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [
         {

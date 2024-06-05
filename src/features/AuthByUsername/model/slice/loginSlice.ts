@@ -21,7 +21,7 @@ export const loginSlice = createSlice({
 		clearUserData: (state) => {
 			state.username = ''
 			state.password = ''
-		}
+		},
 	},
 	extraReducers: (builder) => {
 		builder

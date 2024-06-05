@@ -13,6 +13,10 @@
     fill: var(--inverted-secondary-color);
 }
 
+.link {
+    opacity: 1;
+}
+
 .collapsed {
     .link {
         opacity: 0;
@@ -24,8 +28,4 @@
     .linkItem {
         justify-content: center;
     }
-}
-
-.link {
-    opacity: 1;
 }
