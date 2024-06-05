@@ -25,9 +25,7 @@
     color: yellow;
 }
 
-.link {
-    opacity: 1;
-}
+
 
 .itemsWrapper {
     display: flex;
@@ -36,32 +34,7 @@
     padding-left: 10px;
 }
 
-.linkItem {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    transition: opacity 0.3s ease;
-
-    &:hover {
-        opacity: 0.7;
-    }
-}
-
-.icon {
-    fill: var(--inverted-secondary-color);
-}
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
-
-    .link {
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.4s ease;
-        width: 0;
-    }
-
-    .linkItem {
-        justify-content: center;
-    }
 }

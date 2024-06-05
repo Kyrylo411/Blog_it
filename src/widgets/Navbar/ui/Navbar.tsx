@@ -1,17 +1,18 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
-import { useCallback, useState } from 'react'
+import { memo, useCallback, useState } from 'react'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, userActions } from 'entities/User'
 import cls from './Navbar.module.scss'
+import { loginActions } from 'features/AuthByUsername/model/slice/loginSlice'
 
 interface NavbarProps {
 	className?: string;
 }
 
-export function Navbar({ className }: NavbarProps) {
+export const Navbar = memo(({ className }: NavbarProps) => {
 	const [isAuthModal, setIsAuthModal] = useState(false)
 	const { t } = useTranslation()
 	const user = useSelector(getUserAuthData)
@@ -27,6 +28,7 @@ export function Navbar({ className }: NavbarProps) {
 
 	const onLogout = useCallback(() => {
 		dispatch(userActions.logout())
+		dispatch(loginActions.clearUserData())
 	}, [dispatch])
 
 	if (user) {
@@ -39,8 +41,6 @@ export function Navbar({ className }: NavbarProps) {
 				>
 					{t('log-out')}
 				</Button>
-				<LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-
 				<div className={classNames(cls.linksWrapper)} />
 			</div>
 		)
@@ -63,8 +63,7 @@ export function Navbar({ className }: NavbarProps) {
 					/>
 				)
 			}
-
 			<div className={classNames(cls.linksWrapper)} />
 		</div>
 	)
-}
+})

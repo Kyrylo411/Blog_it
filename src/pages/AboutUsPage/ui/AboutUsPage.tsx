@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 function AboutUsPage() {
@@ -12,4 +12,4 @@ function AboutUsPage() {
 	)
 }
 
-export default AboutUsPage
+export default memo(AboutUsPage)

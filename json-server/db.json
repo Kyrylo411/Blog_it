@@ -19,6 +19,11 @@
     }
 ],
   "profile": {
-    "name": "typicode"
+    "firstName": "Kyrylo",
+    "lastName": "Omelchenko",
+    "age": "34",
+    "country": "Ukraine",
+    "city": "Ivano-Frnakivsk",
+    "avatar": "https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg"
   }
 }
