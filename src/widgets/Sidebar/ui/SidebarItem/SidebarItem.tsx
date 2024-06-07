@@ -13,9 +13,9 @@ interface SidebarItemProps {
 export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
 	const { t } = useTranslation()
 	const {
-		Icon, path, text, translation,
+		Icon, path, text,
 	} = item
-
+	console.log('text >>>>', text)
 	return (
 		<AppLink
 			className={classNames(cls.linkItem, { [cls.collapsed]: collapsed })}
@@ -24,7 +24,7 @@ export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
 		>
 			<Icon className={cls.icon} />
 			<span className={cls.link}>
-				{t(text, { ns: translation })}
+				{t(text)}
 			</span>
 		</AppLink>
 	)

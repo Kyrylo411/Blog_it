@@ -1,6 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import React, {
-	ReactNode, lazy, useCallback, useEffect, useRef, useState,
+	MutableRefObject,
+	ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react'
 import { Portal } from 'shared/ui/Portal/Portal'
 import cls from './Modal.module.scss'
@@ -17,11 +18,11 @@ const ANIMATION_DELAY = 200
 
 export function Modal(props: ModalProps) {
 	const {
-		className, children, isOpen, onClose,
+		className, children, isOpen, onClose, lazy
 	} = props
 	const [isClosing, setIsClosing] = useState(false)
 	const [isMounted, setIsMounted] = useState(false)
-	const timerRef = useRef<ReturnType<typeof setTimeout>>(null)
+	const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>
 
 	useEffect(() => {
 		if (isOpen) {
@@ -29,7 +30,7 @@ export function Modal(props: ModalProps) {
 		}
 	}, [isOpen])
 
-	const mods: Record<string, boolean> = {
+	const mods: Mods = {
 		[cls.opened]: isOpen,
 		[cls.isClosing]: isClosing,
 	}
