@@ -1,7 +1,16 @@
 {
-  "profile page": "Profile page",
-  "my profile": "My profile",
-  "edit profile": "Edit profile",
-  "first name": "First name",
-  "last name": "Last Name"
+	"profile page": "Profile page",
+	"my profile": "My profile",
+	"edit profile": "Edit",
+	"first name": "First name",
+	"last name": "Last Name",
+	"profile error": "An error occurred while loading the profile",
+	"try to reload page": "Try to reload page",
+	"cancel": "Cancel",
+	"age": "Age",
+	"city": "City",
+	"username": "Username",
+	"avatar link": "Avatar link",
+	"choose currency":"Choose currency",
+	"choose country": "Choose country"
 }

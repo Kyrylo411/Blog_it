@@ -1,0 +1,23 @@
+.Wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	&.readonly {
+		opacity: .7;
+	}
+
+	&.editing select{
+    	border-color: var(--green-dark);
+	}
+}
+
+.select {
+	background: none;
+	border: 1px solid var(--inverted-primary-color);
+	border-radius: 8px;
+	padding: 10px;
+    color: var(--primary-color);
+	outline: none;
+}
+

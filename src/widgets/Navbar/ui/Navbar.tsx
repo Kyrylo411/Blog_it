@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback, useState } from 'react'
 import { LoginModal } from 'features/AuthByUsername'
@@ -35,7 +35,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 		return (
 			<div className={classNames(cls.navbar, {}, [className])}>
 				<Button
-					theme={ButtonTheme.CLEAR_INVERTED}
+					theme={ButtonTheme.CLEAR}
 					className={cls.links}
 					onClick={onLogout}
 				>
@@ -49,7 +49,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 	return (
 		<div className={classNames(cls.navbar, {}, [className])}>
 			<Button
-				theme={ButtonTheme.CLEAR_INVERTED}
+				theme={ButtonTheme.CLEAR}
 				className={cls.links}
 				onClick={onShowModal}
 			>

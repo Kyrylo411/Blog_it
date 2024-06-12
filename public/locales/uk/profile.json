@@ -1,7 +1,17 @@
 {
 	"profile page": "Мій профіль",
-	"my profile":"Мій профіль",
-	"edit profile":"Редагувати профіль",
-	"first name":"Ім'я",
-	"last name":"Призвище"
+	"my profile": "Мій профіль",
+	"edit profile": "Редагувати",
+	"first name": "Ім'я",
+	"last name": "Призвище",
+	"profile error": "Виникла помилка під час завантаження профілю",
+	"try to reload page": "Спробуйте перезавантажити сторінку",
+	"cancel": "Скасувати",
+	"save": "Зберегти",
+	"age": "Вік",
+	"city": "Місто",
+	"username": "Юзернейм",
+	"avatar link": "Посилання на аватар",
+	"choose currency":"Оберіть валюту",
+	"choose country": "Оберіть країну"
 }

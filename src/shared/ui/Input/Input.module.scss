@@ -2,6 +2,14 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+	&.readonly {
+		opacity: .7;
+	}
+
+	&.editing input {
+    	border-color: var(--green-dark);
+	}
 }
 
 .placeholder {
@@ -16,4 +24,15 @@
     outline: none;
     width: 100%;
     color: var(--primary-color);
+	
+}
+
+// remove arrow from input type number	
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0; 
+}
+input[type=number] {
+	-moz-appearance:textfield; 
 }
