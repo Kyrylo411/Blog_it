@@ -42,7 +42,7 @@ export const Input = memo((props: InputProps) => {
 
 	const mods: Mods = {
 		[cls.readonly]: readOnly,
-		[cls.editing]: !readOnly
+		[cls.editing]: !readOnly,
 	}
 
 	return (

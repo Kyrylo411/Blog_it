@@ -1,13 +1,12 @@
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getProfileLoading } from './getProfileLoading'
 
-
 describe('getProfileLoading.test', () => {
 	test('should return loading equal to true', () => {
 		const state: DeepPartial<StateSchema> = {
 			profile: {
-				isLoading: true
-			}
+				isLoading: true,
+			},
 		}
 		expect(getProfileLoading(state as StateSchema)).toEqual(true)
 	})

@@ -1,7 +1,7 @@
 import { Countries } from 'entities/Country'
+import { Currency } from 'entities/Currency'
 import { ProfileSchema, ValidateProfileError } from '../types/profile'
 import { profileActions, profileReducer } from './profileSlice'
-import { Currency } from 'entities/Currency'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 
 const data = {
@@ -9,13 +9,12 @@ const data = {
 	city: 'Kharkiv',
 	country: Countries.France,
 	currency: Currency.EUR,
-	firstName: "John",
-	lastName: "Doe",
-	username: 'UserName'
+	firstName: 'John',
+	lastName: 'Doe',
+	username: 'UserName',
 }
 
 describe('profile slice test', () => {
-
 	test('set readonly', () => {
 		const state: DeepPartial<ProfileSchema> = { readonly: true }
 
@@ -35,7 +34,7 @@ describe('profile slice test', () => {
 			readonly: true,
 			validateErrors: undefined,
 			data,
-			form: data
+			form: data,
 		})
 	})
 
@@ -46,21 +45,21 @@ describe('profile slice test', () => {
 			state as ProfileSchema,
 			profileActions.updateProfileData({ username: 'admin' }),
 		)).toEqual({
-			form: { username: 'admin' }
+			form: { username: 'admin' },
 		})
 	})
 
 	test('update profile service pending', () => {
 		const state: DeepPartial<ProfileSchema> = {
 			isLoading: false,
-			validateErrors: [ValidateProfileError.SERVER_ERROR]
+			validateErrors: [ValidateProfileError.SERVER_ERROR],
 		}
 		expect(profileReducer(
 			state as ProfileSchema,
 			updateProfileData.pending,
 		)).toEqual({
 			isLoading: true,
-			validateErrors: undefined
+			validateErrors: undefined,
 		})
 	})
 
@@ -76,7 +75,7 @@ describe('profile slice test', () => {
 			validateErrors: undefined,
 			data,
 			readonly: true,
-			form: data
+			form: data,
 		})
 	})
 })

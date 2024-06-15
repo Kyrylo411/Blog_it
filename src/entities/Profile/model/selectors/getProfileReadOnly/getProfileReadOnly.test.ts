@@ -1,14 +1,12 @@
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getProfileReadOnly } from './getProfileReadOnly'
 
-
-
 describe('getProfileReadOnly.test', () => {
 	test('should return readonly equal to true', () => {
 		const state: DeepPartial<StateSchema> = {
 			profile: {
-				readonly: true
-			}
+				readonly: true,
+			},
 		}
 		expect(getProfileReadOnly(state as StateSchema)).toEqual(true)
 	})

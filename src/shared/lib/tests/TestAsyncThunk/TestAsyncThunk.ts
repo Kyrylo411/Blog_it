@@ -16,11 +16,12 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
 	actionCreator: ActionCreatorType<Return, Arg, RejectedValue>
 
 	navigate: jest.MockedFn<any>
+
 	api: jest.MockedFunctionDeep<AxiosStatic>
 
 	constructor(
 		actionCreator: ActionCreatorType<Return, Arg, RejectedValue>,
-		state?: DeepPartial<StateSchema>
+		state?: DeepPartial<StateSchema>,
 	) {
 		this.actionCreator = actionCreator
 		this.dispatch = jest.fn()
@@ -37,8 +38,9 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
 			this.getState,
 			{
 				api: this.api,
-				navigate: this.navigate
-			})
+				navigate: this.navigate,
+			},
+		)
 
 		return result
 	}

@@ -11,16 +11,15 @@ import {
 	getProfileReadOnly,
 	getProfileValidateErrors,
 	profileActions,
-	profileReducer
+	profileReducer,
 } from 'entities/Profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Currency } from 'entities/Currency'
 import { Countries } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ValidateProfileError } from 'entities/Profile/model/types/profile'
-
+import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 
 const reducers: ReducersList = {
 	profile: profileReducer,
@@ -46,7 +45,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 		[ValidateProfileError.INCORRECT_USER_DATA]: t('incorrect user data'),
 		[ValidateProfileError.NO_DATA]: t('no user info'),
 		[ValidateProfileError.SERVER_ERROR]: t('server error'),
-	}), [])
+	}), [t])
 
 	useEffect(() => {
 		if (__PROJECT__ !== 'storybook') {
@@ -90,7 +89,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
 			<div className={classNames('', {}, [className])}>
 				<ProfilePageHeader />
-				{validateErrors?.length && validateErrors.map(error => (
+				{validateErrors?.length && validateErrors.map((error) => (
 					<Text text={validateErrorsTranslations[error]} theme={TextTheme.ERROR} key={error} />
 				))}
 				<ProfileCard

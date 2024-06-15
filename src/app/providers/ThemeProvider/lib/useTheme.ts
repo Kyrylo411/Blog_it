@@ -18,6 +18,6 @@ export function useTheme(): UseThemeResult {
 
 	return {
 		theme: theme || Theme.LIGHT,
-		toggleTheme
+		toggleTheme,
 	}
 }

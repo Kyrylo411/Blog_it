@@ -1,16 +1,16 @@
 import { StateSchema } from 'app/providers/StoreProvider'
-import { getProfileFormData } from './getProfileFormData'
 import { Countries } from 'entities/Country'
 import { Currency } from 'entities/Currency'
+import { getProfileFormData } from './getProfileFormData'
 
 const data = {
 	age: 24,
 	city: 'Kharkiv',
 	country: Countries.France,
 	currency: Currency.EUR,
-	firstName: "John",
-	lastName: "Doe",
-	username: 'UserName'
+	firstName: 'John',
+	lastName: 'Doe',
+	username: 'UserName',
 }
 
 describe('getProfileFormData.test', () => {
@@ -18,7 +18,7 @@ describe('getProfileFormData.test', () => {
 		const state: DeepPartial<StateSchema> = {
 			profile: {
 				form: data,
-			}
+			},
 		}
 		expect(getProfileFormData(state as StateSchema)).toEqual(data)
 	})

@@ -18,5 +18,6 @@
 	"incorrect country": "Неправильній регіон",
 	"incorrect user data": "Ім'я та фамілія обов'язкові",
 	"no user info": "Дані не вказані",
-	"server error": "Серверна помилка"
+	"server error": "Серверна помилка",
+	"profile avatar": "Аватар профіля"
 }

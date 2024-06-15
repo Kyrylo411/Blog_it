@@ -1,6 +1,8 @@
 import { Mods, classNames } from 'shared/lib/classNames/classNames'
+import {
+	ChangeEvent, memo, useCallback, useMemo,
+} from 'react'
 import cls from './Select.module.scss'
-import { ChangeEvent, memo, useCallback, useMemo } from 'react'
 
 export interface SelectOptions {
 	value: string
@@ -17,28 +19,27 @@ interface SelectProps {
 }
 
 export const Select = memo((props: SelectProps) => {
-	const { className, label, readOnly, options, onChange, value } = props
+	const {
+		className, label, readOnly, options, onChange, value,
+	} = props
 
-	const optionsList = useMemo(() => {
-		return options?.map((option) => (
-			<option
-				key={option.value}
-				value={option.value}
-			>
-				{option.content}
-			</option>
-		))
-	}, [options])
+	const optionsList = useMemo(() => options?.map((option) => (
+		<option
+			key={option.value}
+			value={option.value}
+		>
+			{option.content}
+		</option>
+	)), [options])
 
 	const onChangeHandler = useCallback((e: ChangeEvent<HTMLSelectElement>) => {
 		onChange?.(e.target.value)
-	}, [onchange])
+	}, [onChange])
 
 	const mods: Mods = {
 		[cls.readonly]: readOnly,
-		[cls.editing]: !readOnly
+		[cls.editing]: !readOnly,
 	}
-
 
 	return (
 		<div className={classNames(cls.Wrapper, mods, [className])}>

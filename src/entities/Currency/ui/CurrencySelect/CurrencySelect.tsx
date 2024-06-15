@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { Select } from 'shared/ui/Select/Select'
-import { Currency } from '../../model/types/currency'
 import { memo, useCallback } from 'react'
+import { Currency } from '../../model/types/currency'
 
 interface CurrencySelectProps {
 	className?: string
@@ -18,19 +18,23 @@ const options = [
 ]
 
 export const CurrencySelect = memo((props: CurrencySelectProps) => {
-	const { className, readOnly, onChange, value } = props
+	const {
+		className, readOnly, onChange, value,
+	} = props
 	const { t } = useTranslation('profile')
 
 	const onChangeHandler = useCallback((value: string) => {
 		onChange?.(value as Currency)
 	}, [onChange])
 
-	return <Select
-		label={t('choose currency')}
-		readOnly={readOnly}
-		options={options}
-		className={classNames('', {}, [className])}
-		value={value}
-		onChange={onChangeHandler}
-	/>
+	return (
+		<Select
+			label={t('choose currency')}
+			readOnly={readOnly}
+			options={options}
+			className={classNames('', {}, [className])}
+			value={value}
+			onChange={onChangeHandler}
+		/>
+	)
 })

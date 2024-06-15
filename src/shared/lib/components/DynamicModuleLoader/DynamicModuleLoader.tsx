@@ -8,7 +8,6 @@ export type ReducersList = {
 	[name in StateSchemaKey]?: Reducer
 }
 
-
 interface DynamicModuleLoaderProps {
 	reducers: ReducersList
 	removeAfterUnmount?: boolean

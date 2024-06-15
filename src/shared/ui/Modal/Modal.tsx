@@ -18,7 +18,7 @@ const ANIMATION_DELAY = 200
 
 export function Modal(props: ModalProps) {
 	const {
-		className, children, isOpen, onClose, lazy
+		className, children, isOpen, onClose, lazy,
 	} = props
 	const [isClosing, setIsClosing] = useState(false)
 	const [isMounted, setIsMounted] = useState(false)

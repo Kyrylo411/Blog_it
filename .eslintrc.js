@@ -64,7 +64,7 @@ module.exports = {
 		"semi": [2, "never"],
 		"react/jsx-no-useless-fragment": 'off',
 		"comma-dangle": ["warn"],
-		"eol-last":["warn"]
+		"eol-last": ["warn"]
     },
     globals: {
         __IS_DEV__: true,

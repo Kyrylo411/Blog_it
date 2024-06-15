@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { ProfileCard } from './ProfileCard'
 import { Countries } from 'entities/Country'
 import { Currency } from 'entities/Currency'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import AvatarProfile from 'shared/assets/test/stories-avatar.jpg'
+import { ProfileCard } from './ProfileCard'
 
 const data = {
 	age: 15,
@@ -14,7 +14,7 @@ const data = {
 	currency: Currency.UAH,
 	firstName: 'John',
 	lastName: 'Doe',
-	username: 'User name'
+	username: 'User name',
 }
 
 export default {
@@ -32,36 +32,34 @@ const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...
 
 export const Primary = Template.bind({})
 Primary.args = {
-	data
+	data,
 }
 
 export const PrimaryDark = Template.bind({})
 PrimaryDark.args = {
-	data
+	data,
 }
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
-
 export const Error = Template.bind({})
 Error.args = {
-	error: "error"
+	error: 'error',
 }
 
 export const ErrorDark = Template.bind({})
 ErrorDark.args = {
-	error: "error"
+	error: 'error',
 }
 ErrorDark.decorators = [ThemeDecorator(Theme.DARK)]
 
-
 export const Loading = Template.bind({})
 Loading.args = {
-	isLoading: true
+	isLoading: true,
 }
 
 export const LoadingDark = Template.bind({})
 LoadingDark.args = {
-	isLoading: true
+	isLoading: true,
 }
 
 LoadingDark.decorators = [ThemeDecorator(Theme.DARK)]

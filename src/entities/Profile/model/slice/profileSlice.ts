@@ -8,7 +8,7 @@ const initialState: ProfileSchema = {
 	readonly: true,
 	error: undefined,
 	data: undefined,
-	form: undefined
+	form: undefined,
 }
 
 export const profileSlice = createSlice({
@@ -21,14 +21,14 @@ export const profileSlice = createSlice({
 		updateProfileData: (state, action: PayloadAction<Profile>) => {
 			state.form = {
 				...state.form,
-				...action.payload
+				...action.payload,
 			}
 		},
 		cancelEdit: (state) => {
 			state.readonly = true
 			state.validateErrors = undefined
 			state.form = state.data
-		}
+		},
 	},
 	extraReducers: (builder) => {
 		builder

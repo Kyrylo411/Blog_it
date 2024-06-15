@@ -32,7 +32,7 @@ export function createReduxStore(
 		preloadedState: initialState,
 		middleware: (getDefaultMiddleware) => getDefaultMiddleware({
 			thunk: {
-				extraArgument: extraArg
+				extraArgument: extraArg,
 			},
 		}),
 	})

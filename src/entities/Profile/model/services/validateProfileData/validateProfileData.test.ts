@@ -1,7 +1,7 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
-import { validateProfileData } from './validateProfileData'
 import { Countries } from 'entities/Country'
 import { Currency } from 'entities/Currency'
+import { validateProfileData } from './validateProfileData'
 import { ValidateProfileError } from '../../types/profile'
 
 const data = {
@@ -9,9 +9,9 @@ const data = {
 	city: 'Kharkiv',
 	country: Countries.France,
 	currency: Currency.EUR,
-	firstName: "John",
-	lastName: "Doe",
-	username: 'UserName'
+	firstName: 'John',
+	lastName: 'Doe',
+	username: 'UserName',
 }
 
 describe('validateProfileData.test', () => {
