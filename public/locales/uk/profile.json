@@ -13,5 +13,10 @@
 	"username": "Юзернейм",
 	"avatar link": "Посилання на аватар",
 	"choose currency":"Оберіть валюту",
-	"choose country": "Оберіть країну"
+	"choose country": "Оберіть країну",
+	"incorrect age": "Неправильній вік",
+	"incorrect country": "Неправильній регіон",
+	"incorrect user data": "Ім'я та фамілія обов'язкові",
+	"no user info": "Дані не вказані",
+	"server error": "Серверна помилка"
 }

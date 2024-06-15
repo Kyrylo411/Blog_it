@@ -12,5 +12,10 @@
 	"username": "Username",
 	"avatar link": "Avatar link",
 	"choose currency":"Choose currency",
-	"choose country": "Choose country"
+	"choose country": "Choose country",
+	"incorrect age": "Incorrect age",
+	"incorrect country": "Incorrect region",
+	"incorrect user data": "First name and Last name are required",
+	"no user info": "No user info",
+	"server error": "Server error"
 }

@@ -4,6 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import AboutUsPage
 	from 'pages/AboutUsPage/ui/AboutUsPage'
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
 	title: 'pages/AboutUs',

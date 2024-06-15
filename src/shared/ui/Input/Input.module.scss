@@ -8,7 +8,7 @@
 	}
 
 	&.editing input {
-    	border-color: var(--green-dark);
+    	border-color: var(--inverted-primary-color);
 	}
 }
 
@@ -18,7 +18,7 @@
 
 .input {
     background: transparent;
-    border: 1px solid var(--inverted-primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 8px;
     padding: 10px;
     outline: none;
