@@ -4,6 +4,11 @@
     background: var(--inverted-bg-color);
     position: relative;
     transition: width 0.3s ease;
+
+	&.collapsed {
+		.itemsWrapper {
+			align-items: center;
+	}}
 }
 
 .switchers {
@@ -22,8 +27,6 @@
     bottom: 32px;
     right: -32px;
     z-index: 1;
-
-    // color: var(--primary-color);
 }
 
 .itemsWrapper {
