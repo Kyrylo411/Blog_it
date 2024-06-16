@@ -15,10 +15,6 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-
-    & button {
-        color: var(--inverted-primary-color);
-    }
 }
 
 .collapseBtn {
@@ -26,8 +22,7 @@
     bottom: 32px;
     right: -32px;
     z-index: 1;
-    color: #ffc700;
-    color: var(--inverted-secondary-color);
+    // color: var(--primary-color);
 }
 
 .itemsWrapper {
