@@ -3,14 +3,15 @@ import { AppRouter } from 'app/providers/router'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { Suspense, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { userActions } from 'entities/User'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUserIsMounted, userActions } from 'entities/User'
 import { useTheme } from './providers/ThemeProvider'
 
 function App() {
 	const { theme } = useTheme()
 	const dispatch = useDispatch()
-
+	const isMounted = useSelector(getUserIsMounted)
+	console.log('isMounted >>>>', isMounted)
 	useEffect(() => {
 		dispatch(userActions.initAuthData())
 	}, [dispatch])
@@ -21,7 +22,7 @@ function App() {
 				<Navbar />
 				<div className="content-page">
 					<Sidebar />
-					<AppRouter />
+					{isMounted && <AppRouter />}
 				</div>
 			</Suspense>
 		</div>
