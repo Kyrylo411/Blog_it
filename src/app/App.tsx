@@ -11,7 +11,7 @@ function App() {
 	const { theme } = useTheme()
 	const dispatch = useDispatch()
 	const isMounted = useSelector(getUserIsMounted)
-	console.log('isMounted >>>>', isMounted)
+
 	useEffect(() => {
 		dispatch(userActions.initAuthData())
 	}, [dispatch])
