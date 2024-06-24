@@ -26,7 +26,7 @@ export const RouterPath: Record<AppRoutes, string> = {
 	[AppRoutes.ABOUT_US]: '/about-us',
 	[AppRoutes.PROFILE]: '/profile',
 	[AppRoutes.ARTICLES]: '/articles',
-	[AppRoutes.ARTICLE_DETAILS]: '/articles/', // + id
+	[AppRoutes.ARTICLE_DETAILS]: '/articles/',
 	[AppRoutes.NOT_FOUND]: '*',
 }
 

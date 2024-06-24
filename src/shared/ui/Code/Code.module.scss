@@ -1,0 +1,22 @@
+.CodeWrapper {
+    border: 1px solid var(--secondary-color);
+    border-radius: 12px;
+    background: var(--code-bg);
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+}
+
+.code {
+    color: var(--inverted-primary-color);
+}
+
+.copyBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.copyIcon path {
+    stroke: var(--inverted-primary-color);
+}

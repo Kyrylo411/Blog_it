@@ -3,7 +3,7 @@ import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage'
 import { User, UserSchema } from '../types/userSchema'
 
 const initialState: UserSchema = {
-	_mounted: false
+	_mounted: false,
 }
 
 export const userSlice = createSlice({

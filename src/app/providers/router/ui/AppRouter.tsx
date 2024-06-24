@@ -30,4 +30,4 @@ const AppRouter = () => {
 	)
 }
 
-export default memo(AppRouter);
+export default memo(AppRouter)
