@@ -1,6 +1,6 @@
 .CodeWrapper {
     border: 1px solid var(--secondary-color);
-    border-radius: 12px;
+    border-radius: var(--border-radius-m);
     background: var(--code-bg);
     padding: 20px;
     position: relative;

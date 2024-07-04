@@ -3,7 +3,7 @@
     padding: 20px;
     border: 2px solid var(--primary-color);
     gap: 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius-s);
     justify-content: flex-start;
 
     &.editing {

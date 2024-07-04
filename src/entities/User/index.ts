@@ -1,4 +1,4 @@
-export { getUserIsMounted } from './model/selectors/getUserAuthData/getUserIsMounted'
+export { getUserIsMounted } from './model/selectors/getUserIsMounted/getUserIsMounted'
 export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData'
 export { userActions, userReducer } from './model/slice/userSlice'
 export { User, UserSchema } from './model/types/userSchema'

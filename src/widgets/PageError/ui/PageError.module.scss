@@ -12,6 +12,6 @@
 .button {
     color: var(--primary-color);
     border: 1px solid #000e8d;
-    border-radius: 12px;
+    border-radius: var(--border-radius-m);
     padding: 8px;
 }
