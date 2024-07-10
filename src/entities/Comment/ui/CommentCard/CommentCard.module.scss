@@ -1,20 +1,19 @@
 .CommentCard {
-	padding: 16px;
-	border: 2px solid var(--secondary-color);
-	border-radius: var(--border-radius-s);
-	background: var(--primary-color);
-	
+    padding: 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius-s);
+    background: var(--primary-color);
 
-	&.loading {
-		border: none;
-	}
+
+    &.loading {
+        border: none;
+    }
 }
 
 .header {
-	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
-	gap: 8px;
-	width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+    width: fit-content;
 }
-

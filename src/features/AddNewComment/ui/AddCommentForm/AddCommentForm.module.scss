@@ -1,23 +1,24 @@
 .AddCommentForm {
-	display: flex;
-	align-items: flex-end;
-	gap: 12px;
-	margin-bottom: 20px;
-	border: 2px solid var(--inverted-secondary-color);
-	border-radius: var(--border-radius-m);
-	padding: 15px;
-	background: var(--primary-color);
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 20px;
+    border: 2px solid var(--inverted-secondary-color);
+    border-radius: var(--border-radius-m);
+    padding: 15px;
+    background: var(--primary-color);
 }
 
 .commentInput {
-	flex-grow: 1;
-	color:var(--inverted-secondary-color);
-	& input {
-		border-color: var(--inverted-secondary-color) !important;
-		color:var(--inverted-secondary-color);
-	}
+    flex-grow: 1;
+    color: var(--inverted-secondary-color);
+
+    & input {
+        border-color: var(--inverted-secondary-color) !important;
+        color: var(--inverted-secondary-color);
+    }
 }
 
 .btn {
-	height: fit-content;
+    height: fit-content;
 }

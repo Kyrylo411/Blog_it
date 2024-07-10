@@ -11,7 +11,7 @@ const defaultAsyncReducers: ReducersList = {
 	profile: profileReducer,
 	articleDetails: articleDetailsReducer,
 	addNewComment: addNewCommentReducer,
-	articleDetailsComments: articleDetailsReducer
+	articleDetailsComments: articleDetailsReducer,
 }
 
 export const StoreDecorator = (

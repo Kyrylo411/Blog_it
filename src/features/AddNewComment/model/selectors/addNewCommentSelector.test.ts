@@ -1,7 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getAddNewCommentText, getAddNewCommentError } from './addNewCommentSelector'
 
-
 describe('addNewCommentSelector.test', () => {
 	test('should return correct text', () => {
 		const state: DeepPartial<StateSchema> = {

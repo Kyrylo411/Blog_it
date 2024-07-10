@@ -3,11 +3,13 @@ import { useTranslation } from 'react-i18next'
 import { Text } from 'shared/ui/Text/Text'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useSelector } from 'react-redux'
-import { getProfileData, getProfileReadOnly, profileActions, updateProfileData } from 'entities/Profile'
+import {
+	getProfileData, getProfileReadOnly, profileActions, updateProfileData,
+} from 'entities/Profile'
 import { useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import cls from './ProfilePageHeader.module.scss'
 import { getUserAuthData } from 'entities/User'
+import cls from './ProfilePageHeader.module.scss'
 
 interface ProfilePageHeaderProps {
 	className?: string

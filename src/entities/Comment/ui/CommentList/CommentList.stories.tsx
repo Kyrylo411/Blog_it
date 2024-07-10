@@ -1,24 +1,23 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { CommentList } from './CommentList'
 import { Comment } from 'entities/Comment/model/types/comment'
-
+import { CommentList } from './CommentList'
 
 const commentsList: Comment[] = [
 	{
 		id: '1',
 		text: '123',
-		user: { id: '1', username: 'username' }
+		user: { id: '1', username: 'username' },
 	},
 	{
 		id: '2',
 		text: 'text',
-		user: { id: '2', username: 'some user' }
+		user: { id: '2', username: 'some user' },
 	},
 	{
 		id: '3',
 		text: 'asd',
-		user: { id: '1', username: 'loader' }
-	}
+		user: { id: '1', username: 'loader' },
+	},
 ]
 
 export default {
@@ -37,17 +36,17 @@ const Template: ComponentStory<typeof CommentList> = (args) => <CommentList {...
 export const Normal = Template.bind({})
 Normal.args = {
 	comments: commentsList,
-	isLoading: false
+	isLoading: false,
 }
 
 export const Loading = Template.bind({})
 Loading.args = {
 	isLoading: true,
-	comments: commentsList
+	comments: commentsList,
 }
 
 export const NoComments = Template.bind({})
 NoComments.args = {
 	comments: [],
-	isLoading: false
+	isLoading: false,
 }

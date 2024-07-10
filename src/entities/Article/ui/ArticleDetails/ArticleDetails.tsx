@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 import {
 	getArticleDetailsData,
 	getArticleDetailsError,
-	getArticleDetailsIsLoading
+	getArticleDetailsIsLoading,
 } from 'entities/Article/model/selectors/articleDetails'
 import {
 	Text, TextAlign, TextSize, TextTheme,
@@ -19,12 +19,12 @@ import EyeIcon from 'shared/assets/icons/eyeIcon.svg'
 import CalendarIcon from 'shared/assets/icons/calendarIcon.svg'
 import { Icon } from 'shared/ui/Icon/Icon'
 import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import cls from './ArticleDetails.module.scss'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 
 interface ArticleDetailsProps {
 	className?: string
@@ -37,35 +37,35 @@ const reducers: ReducersList = {
 
 const renderBlock = (block: ArticleBlock) => {
 	switch (block.type) {
-		case ArticleBlockType.CODE:
-			return (
-				<ArticleCodeBlockComponent
-					className={cls.articleBlock}
-					key={block.id}
-					block={block}
-				/>
-			)
+	case ArticleBlockType.CODE:
+		return (
+			<ArticleCodeBlockComponent
+				className={cls.articleBlock}
+				key={block.id}
+				block={block}
+			/>
+		)
 
-		case ArticleBlockType.IMAGE:
-			return (
-				<ArticleImageBlockComponent
-					className={cls.articleBlock}
-					key={block.id}
-					block={block}
-				/>
-			)
+	case ArticleBlockType.IMAGE:
+		return (
+			<ArticleImageBlockComponent
+				className={cls.articleBlock}
+				key={block.id}
+				block={block}
+			/>
+		)
 
-		case ArticleBlockType.TEXT:
-			return (
-				<ArticleTextBlockComponent
-					className={cls.articleBlock}
-					key={block.id}
-					block={block}
-				/>
-			)
+	case ArticleBlockType.TEXT:
+		return (
+			<ArticleTextBlockComponent
+				className={cls.articleBlock}
+				key={block.id}
+				block={block}
+			/>
+		)
 
-		default:
-			return null
+	default:
+		return null
 	}
 }
 

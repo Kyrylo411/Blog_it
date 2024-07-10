@@ -19,8 +19,8 @@ Normal.args = {
 	comment: {
 		id: '1',
 		text: '123',
-		user: { id: '1', username: 'username' }
-	}
+		user: { id: '1', username: 'username' },
+	},
 }
 
 export const Loading = Template.bind({})
@@ -29,7 +29,6 @@ Loading.args = {
 	comment: {
 		id: '1',
 		text: '123',
-		user: { id: '1', username: 'username' }
-	}
+		user: { id: '1', username: 'username' },
+	},
 }
-
