@@ -4,6 +4,10 @@
 	border-radius: var(--border-radius-s);
 	background: var(--primary-color);
 	
+
+	&.loading {
+		border: none;
+	}
 }
 
 .header {
@@ -11,4 +15,6 @@
 	align-items: center;
 	margin-bottom: 10px;
 	gap: 8px;
+	width: fit-content;
 }
+

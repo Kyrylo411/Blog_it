@@ -1,13 +1,15 @@
 {
   "articles": [
-   {
+    {
       "id": "1",
       "title": "Javascript news",
       "subtitle": "Що нового в JS за 2022 рік?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -70,7 +72,7 @@
       ]
     }
   ],
-  "comments":  [
+  "comments": [
     {
       "id": "1",
       "text": "some comment",
@@ -88,6 +90,42 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "sdfsdfasdasdфвыasd",
+      "id": "sxugLIC"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asd asd asd asd ",
+      "id": "S8MkksC"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "sad asd asd ",
+      "id": "RNUV5ag"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "new comment",
+      "id": "DJpvQ0q"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "new",
+      "id": "v_RAQcX"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "ascasc",
+      "id": "ikrGF7U"
     }
   ],
   "users": [
@@ -96,24 +134,38 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-	  "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector.png"
+      "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector.png"
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "Kytsunya",
       "password": "123",
       "role": "USER",
-	  "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-Photo.png"
+      "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-Photo.png"
     }
   ],
-  "profile": {
-    "firstName": "kyrylo",
-    "lastName": "Omelchenko",
-    "age": 34,
-    "country": "Ukraine",
-    "city": "Ivano-Frnakivsk",
-    "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector.png",
-    "username": "voro-buceck",
-    "currency": "UAH"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstName": "kyrylo",
+      "lastName": "Omelchenko",
+      "age": 34,
+      "country": "Ukraine",
+      "city": "Ivano-Frnakivsk",
+      "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector.png",
+      "username": "voro-buceck",
+      "currency": "UAH"
+    },
+    {
+      "id": "2",
+      "firstName": "Nastya",
+      "lastName": "Kotyash",
+      "age": 25,
+      "country": "Ukraine",
+      "city": "Ivano-Frnakivsk",
+      "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-Photo.png",
+      "username": "Kytsunya",
+      "currency": "UAH"
+    }
+  ]
 }
